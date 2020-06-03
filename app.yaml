@@ -1,6 +1,0 @@
-FROM node:8
-COPY . /var/www/emotional_analysis
-WORKRDIR /var/www/emotional_analysis
-RUN npm install
-ENTRYPOINT npm start
-EXPOSE 3000
