@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import LoadingComponent  from "../../../../sharedComponents/svgs/loading/loadingComponent.js";
-import SVG from "../../../../_assets/img/svg/loading.svg";
+import React from "react";
+import LoadingComponent  from "../../../../components/svgs/loading/loadingComponent.js";
+import SVG from "../../../../__assets__/img/svg/loading.svg";
 import { connect } from "react-redux";
 
 const LoadingSvgComponent = (props) => {

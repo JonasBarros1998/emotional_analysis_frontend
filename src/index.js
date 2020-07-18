@@ -8,16 +8,16 @@ import * as serviceWorker from './serviceWorker';
 import { reducers } from './reducer'
 
 /**IMPORTS CSS**/
-import './_assets/styles/all.css';
-import './_assets/styles/bootstrap.min.css';
-import './_assets/styles/style.css';
-import './_assets/styles/main.css';
+import './__assets__/styles/bootstrap.min.css';
+import './__assets__/styles/style.css';
+import './__assets__/styles/main.css';
 
 /**IMPORTS JAVASCRIPT **/
-import './_assets/js/jquery-3.2.1.min.js';
-import './_assets/js/popper.min.js';
-import './_assets/js/bootstrap.min.js';
-import './_assets/js/main.js';
+/*
+import './__assets__/js/jquery-3.2.1.min.js';
+import './__assets__/js/popper.min.js';
+import './__assets__/js/bootstrap.min.js';
+import './__assets__/js/main.js';*/
 
 const store = createStore(reducers, applyMiddleware(thunk))
 

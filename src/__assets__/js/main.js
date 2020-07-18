@@ -1,12 +1,9 @@
-/* eslint-disable */
-import $ from 'jquery'
+/**eslint-disabled 
 $(function() {
   "use strict";
 
   var nav_offset_top = $('header').height() + 50; 
-    /*-------------------------------------------------------------------------------
-	  Navbar 
-	-------------------------------------------------------------------------------*/
+
     function navbarFixed(){
         if ( $('.header_area').length ){ 
             $(window).scroll(function() {
@@ -22,10 +19,6 @@ $(function() {
     navbarFixed();
 
 
-
-    /*-------------------------------------------------------------------------------
-	  clients logo slider
-	-------------------------------------------------------------------------------*/
     if ($('.clients_slider').length) {
       $('.clients_slider').owlCarousel({
           loop: true,
@@ -54,10 +47,6 @@ $(function() {
       })
     }
 
-
-    /*-------------------------------------------------------------------------------
-	  testimonial slider
-	-------------------------------------------------------------------------------*/
     if ($('.testimonial').length) {
       $('.testimonial').owlCarousel({
           loop: true,
@@ -76,7 +65,11 @@ $(function() {
       })
     }
 
+	function mailChimp() {
+		$('#mc_embed_signup').find('form').ajaxChimp();
+	}
+  mailChimp();
   
-});
+});*/
 
 

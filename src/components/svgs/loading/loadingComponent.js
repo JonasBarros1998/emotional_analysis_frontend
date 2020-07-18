@@ -6,7 +6,6 @@
 import React from "react"
 
 const LoadingComponent = (props) => {
-    console.log("OK, entrei");
     return (
         <div>
             <img {...props} />
