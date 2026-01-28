@@ -29,4 +29,4 @@ jobs:
     #      aws sts get-caller-identity
 
       - name: create dash
-        uses: JonasBarros1998/automate-dashboards@1.5.1
+        uses: "JonasBarros1998/automate dashboards@latest"
