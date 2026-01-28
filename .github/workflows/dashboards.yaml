@@ -24,9 +24,5 @@ jobs:
           role-to-assume: arn:aws:iam::700552527916:role/tutorial-role
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
           aws-region: ${{ env.AWS_REGION }}
-    #  - name: Sts GetCallerIdentity
-    #    run: |
-    #      aws sts get-caller-identity
-
       - name: create dash
-        uses: "JonasBarros1998/dashboardsia-github-action@1.5.1"
+        uses: "JonasBarros1998/automate-dashboards@1.5.2"
