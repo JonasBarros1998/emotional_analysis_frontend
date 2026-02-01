@@ -25,4 +25,4 @@ jobs:
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
           aws-region: ${{ env.AWS_REGION }}
       - name: create dash
-        uses: "JonasBarros1998/automate-dashboards@1.5.4"
+        uses: "JonasBarros1998/automate-dashboards@1.5.6"

@@ -14,7 +14,6 @@ Instale todas as dependencias do projeto com o comando: `npm install`
 
 Rode o projeto com `npm start` e acesse a url `http://localhost:3000/`
 
-Agora entre na pasta `backend` e rode o comando `docker-compose build`(para o comando funcionar deverá ter o docker instalado na sua maquina) e logo em seguida digite `docker-compose up`. 
-
+Agora entre na pasta `backend` e rode o comando `docker-compose build`(para o comando funcionar deverá ter o docker instalado na sua maquina) e logo em seguida digite `docker-compose up`.
 
 ![image_1](https://user-images.githubusercontent.com/35241982/80975571-a356c500-8df8-11ea-9b6e-17c96e766c59.png)
