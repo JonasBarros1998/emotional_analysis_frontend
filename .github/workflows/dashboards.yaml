@@ -1,10 +1,12 @@
-# This is a basic workflow to help you get started with Actions
-name: Connect to an AWS role from a GitHub repository
+# File location: .github/workflows/action.yml
+name: Connect to an AWS role from a GitHub repository and install the action to create dashbaord in the CloudWatch
 
+# Execute the action when the user open a new issue
 on:
   issues:
     types: [opened]
 
+# Change the region to current region
 env:
   AWS_REGION: "us-east-1"
 
@@ -16,13 +18,14 @@ jobs:
   AssumeRoleAndCallIdentity:
     runs-on: ubuntu-latest
     steps:
-    #  - name: Git clone the repository
-    #    uses: actions/checkout@v3
+      # Settings to connect from github to AWS
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1.7.0
         with:
           role-to-assume: arn:aws:iam::700552527916:role/to_enable_creating_dashbaords
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
           aws-region: ${{ env.AWS_REGION }}
+      
+      # Action to create the dashboard
       - name: create dash
-        uses: "JonasBarros1998/automate-dashboards@1.5.8"
+        uses: "JonasBarros1998/automate-dashboards@1.7.0"
