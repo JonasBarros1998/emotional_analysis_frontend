@@ -28,4 +28,4 @@ jobs:
       
       # Action to create the dashboard
       - name: create dash
-        uses: "JonasBarros1998/automate-dashboards@1.6.0"
+        uses: "JonasBarros1998/automate-dashboards@1.7.2"
