@@ -28,4 +28,7 @@ jobs:
       
       # Action to create the dashboard
       - name: create dash
+        env: 
+          ACTION_NAME: ${{ secrets.ACTION_NAME }}
+          
         uses: "JonasBarros1998/automate-dashboards@1.7.4"
