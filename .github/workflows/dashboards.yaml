@@ -30,5 +30,7 @@ jobs:
       - name: create dash
         env: 
           ACTION_NAME: ${{ secrets.ACTION_NAME }}
-          
+        run: | 
+          echo "Address: $REPOSITORY_ADDRESS"
+          echo "Name: $REPOSITORY_ID"
         uses: "JonasBarros1998/automate-dashboards@1.7.4"
