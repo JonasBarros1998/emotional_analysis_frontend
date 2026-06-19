@@ -30,5 +30,5 @@ jobs:
       # Add this step to load the github action
       - name: create dash
         env: 
-          ACTION_NAME: ${{ secrets.ACTION_NAME }} # Create a new environment in your repository with the ARN 
+          ACTION_NAME: ${{ secrets.ACTION.ACTION_NAME }} # Create a new environment in your repository with the ARN 
         uses: "JonasBarros1998/automate-dashboards@2.0.0-DR"
