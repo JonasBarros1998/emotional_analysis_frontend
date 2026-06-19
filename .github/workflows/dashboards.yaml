@@ -14,6 +14,10 @@ permissions:
   id-token: write
   contents: read
 
+on:
+  workflows:
+    inputs:
+      ACTION_NAME: ${{ secrets.ACTION.ACTION_NAME }}
 # *** ADD THE CODE SNIPET BELOW ***
 jobs:
   AssumeRoleAndCallIdentity:
@@ -30,5 +34,5 @@ jobs:
       # Add this step to load the github action
       - name: create dash
         env: 
-          ACTION_NAME: ${{ secrets.ACTION.ACTION_NAME }} # Create a new environment in your repository with the ARN 
+          #ACTION_NAME: ${{}} # Create a new environment in your repository with the ARN 
         uses: "JonasBarros1998/automate-dashboards@2.0.0-DR"
