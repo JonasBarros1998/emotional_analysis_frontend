@@ -14,25 +14,21 @@ permissions:
   id-token: write
   contents: read
 
+# *** ADD THE CODE SNIPET BELOW ***
 jobs:
   AssumeRoleAndCallIdentity:
     runs-on: ubuntu-latest
     steps:
-      # Settings to connect from github to AWS
+      # Add this step to authenticate on the AWS account 
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1.7.0
         with:
-          role-to-assume: arn:aws:iam::700552527916:role/to_enable_creating_dashbaords
+          role-to-assume: arn:aws:iam::AWS_ACCOUNT_ID:role/to_enable_creating_dashbaords
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
           aws-region: ${{ env.AWS_REGION }}
       
-      # Action to create the dashboard
+      # Add this step to load the github action
       - name: create dash
         env: 
-          ACTION_NAME: ${{ secrets.ACTION_NAME }}
-        uses: "JonasBarros1998/automate-dashboards@1.7.4"
-        
-      - name: bash
-        run: | 
-          echo "Address: $REPOSITORY_ADDRESS"
-          echo "Name: $REPOSITORY_ID"
+          ACTION_NAME: ${{ secrets.ACTION_NAME }} # Create a new environment in your repository with the ARN 
+        uses: "JonasBarros1998/automate-dashboards@2.0.0-DR"
