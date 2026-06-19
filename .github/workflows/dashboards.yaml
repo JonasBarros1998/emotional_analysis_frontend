@@ -5,9 +5,6 @@ name: Connect to an AWS role from a GitHub repository and install the action to 
 on:
   issues:
     types: [opened]
-  workflows:
-    inputs:
-      ACTION_NAME: ${{ secrets.ACTION.ACTION_NAME }}
 
 # Change the region to current region
 env:
@@ -33,6 +30,6 @@ jobs:
       
       # Add this step to load the github action
       - name: create dash
-        env: 
-          #ACTION_NAME: ${{}} # Create a new environment in your repository with the ARN 
+        with: 
+          ACTION_NAME: ${{ secrets.ACTION_NAME }} # Create a new environment in your repository with the ARN 
         uses: "JonasBarros1998/automate-dashboards@2.0.0-DR"
