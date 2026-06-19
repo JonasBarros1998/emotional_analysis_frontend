@@ -5,6 +5,9 @@ name: Connect to an AWS role from a GitHub repository and install the action to 
 on:
   issues:
     types: [opened]
+  workflows:
+    inputs:
+      ACTION_NAME: ${{ secrets.ACTION.ACTION_NAME }}
 
 # Change the region to current region
 env:
@@ -14,10 +17,7 @@ permissions:
   id-token: write
   contents: read
 
-on:
-  workflows:
-    inputs:
-      ACTION_NAME: ${{ secrets.ACTION.ACTION_NAME }}
+
 # *** ADD THE CODE SNIPET BELOW ***
 jobs:
   AssumeRoleAndCallIdentity:
