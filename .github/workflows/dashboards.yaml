@@ -1,5 +1,5 @@
 # File location: .github/workflows/action.yml
-name: Connect to an AWS role from a GitHub repository and install the action to create dashbaord in the CloudWatch
+name: Connect to an AWS role from a GitHub repository and install the action to create dashboard in the CloudWatch
 
 # Execute the action when the user open a new issue
 on:
@@ -33,4 +33,4 @@ jobs:
       - name: create dash
         env: 
           ACTION_NAME: ${{ secrets.ACTION_NAME }} # Create a new environment in your repository with the ARN 
-        uses: "JonasBarros1998/automate-dashboards@2.0.3-DR"
+        uses: "JonasBarros1998/automate-dashboards@2.0.4-DR"
