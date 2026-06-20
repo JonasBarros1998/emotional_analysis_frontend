@@ -19,6 +19,7 @@ permissions:
 jobs:
   AssumeRoleAndCallIdentity:
     runs-on: ubuntu-latest
+    environment: ACTIONS
     steps:
       # Add this step to authenticate on the AWS account 
       - name: configure aws credentials
@@ -32,5 +33,4 @@ jobs:
       - name: create dash
         with: 
           ACTION_NAME: ${{ secrets.ACTION_NAME }} # Create a new environment in your repository with the ARN 
-          ACTION_NAME_V2: ${{ secrets.ACTIONS.ACTION_NAME }}
-        uses: "JonasBarros1998/automate-dashboards@2.0.2-DR"
+        uses: "JonasBarros1998/automate-dashboards@2.0.3-DR"
