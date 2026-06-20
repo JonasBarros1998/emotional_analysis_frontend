@@ -33,4 +33,4 @@ jobs:
         with: 
           ACTION_NAME: ${{ secrets.ACTION_NAME }} # Create a new environment in your repository with the ARN 
           ACTION_NAME_V2: ${{ secrets.ACTIONS.ACTION_NAME }}
-        uses: "JonasBarros1998/automate-dashboards@2.0.0-DR"
+        uses: "JonasBarros1998/automate-dashboards@2.0.2-DR"
